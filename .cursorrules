@@ -1,52 +1,95 @@
-# 🚀 AI Dev Tasks for Cursor 🤖
+# Equity Dashboard V1 - Cursor Rules
 
-Welcome to **AI Dev Tasks**! This workspace uses a structured approach to feature development with built-in checkpoints for verification.
+## Project Context
+Personal investment analysis dashboard for Indian companies. Processes Screener.in JSON data, calculates 25+ financial ratios, and visualizes operating cycles through Apple-inspired design with pastel colors.
 
-## Workflow: From Idea to Implemented Feature 💡➡️💻
+## Development Methodology: Test-Driven Development (TDD)
+**CRITICAL**: All development must follow strict TDD principles:
+1. **RED**: Write failing tests first
+2. **GREEN**: Write minimal code to pass tests  
+3. **REFACTOR**: Clean up while keeping tests passing
+4. **NO feature code without corresponding tests**
 
-### 1️⃣ Create a Product Requirement Document (PRD)
-Use `@create-prd.mdc` to generate a detailed PRD:
+## Tech Stack
+- **Framework**: Next.js 14 (App Router)
+- **Database**: Supabase
+- **Charts**: Recharts with custom styling
+- **Styling**: Tailwind CSS with pastel color palette
+- **State**: Zustand
+- **Testing**: Jest + React Testing Library + Playwright
+
+## Key Guidelines
+
+### Code Quality
+- Maintain >90% test coverage (100% for financial calculations)
+- Follow TypeScript strict mode
+- Use descriptive variable names
+- Add JSDoc comments for complex functions
+
+### Design Principles
+- **Phase Colors**: Green (expansion), Red (contraction), Yellow (transition), Gray (stable)
+- **Mobile-First**: All components must be responsive
+- **Accessibility**: WCAG 2.1 compliance
+- **Performance**: <2s load time, <1s chart rendering
+
+### File Structure
 ```
-Use @create-prd.mdc
-Here's the feature I want to build: [Describe your feature in detail]
-Reference these files to help you: [Optional: @file1.py @file2.ts]
+src/
+├── app/                    # Next.js 14 App Router
+├── components/             # React components
+│   ├── ui/                # Base UI components
+│   ├── charts/            # Chart components
+│   ├── company/           # Company-specific components
+│   └── [feature]/         # Feature-specific components
+├── lib/                   # Utilities and calculations
+├── services/              # Data layer services
+├── stores/                # Zustand stores
+├── types/                 # TypeScript types
+└── utils/                 # Helper functions
 ```
 
-### 2️⃣ Generate Your Task List from the PRD
-Use `@generate-tasks.mdc` to create implementation tasks:
-```
-Now take @MyFeature-PRD.md and create tasks using @generate-tasks.mdc
-```
+### Testing Strategy
+- **Unit Tests**: All utilities, calculations, services
+- **Component Tests**: UI components with React Testing Library
+- **Integration Tests**: Complete workflows with MSW
+- **E2E Tests**: Critical user journeys with Playwright
 
-### 3️⃣ Process Tasks Step-by-Step
-Use `@process-task-list.mdc` for methodical implementation:
-```
-Please start on task 1.1 and use @process-task-list.mdc
-```
+### Task Management
+- Follow task list in `PRD tasks/tasks-prd-equity-dashboard-v1.md`
+- Commit after each completed task using `./commit-task.sh`
+- Update README progress tracking
+- Mark tasks as completed in task list
 
-## ✨ Core Principles
+### Financial Calculations
+- 100% test coverage required
+- Support both regular and finance company variants
+- Handle edge cases (division by zero, missing data)
+- Validate all calculations against known benchmarks
 
-1. **Structured Development:** Clear process from idea to code
-2. **Step-by-Step Verification:** Review and approve each step
-3. **Manages Complexity:** Break down large features into digestible tasks
-4. **Clear Progress Tracking:** Visual representation of completed tasks
+### Chart Requirements
+- Support quarterly (12 quarters) and annual (12 years) views
+- Implement colored phase bands for cycle identification
+- Smooth animations and hover interactions
+- Mobile-optimized touch gestures
 
-## 🗂️ Workflow Files
+### Performance Requirements
+- Virtual scrolling for 5000+ companies
+- Lazy loading for chart sections
+- Web Workers for heavy calculations
+- React.memo for expensive components
 
-- **`create-prd.mdc`**: Guides AI in generating Product Requirement Documents
-- **`generate-tasks.mdc`**: Breaks down PRDs into detailed task lists
-- **`process-task-list.mdc`**: Manages task implementation one step at a time
+## Commit Workflow
+1. Complete task following TDD
+2. Run all tests: `npm test`
+3. Commit: `./commit-task.sh "X.Y" "Task description"`
+4. Update task list and README progress
+5. Push to GitHub
 
-## 💡 Best Practices
+## Next Task
+Current focus: Task 1.1 - Initialize Next.js 14 project with TypeScript and app router
 
-- Be specific in feature descriptions
-- Use MAX mode for comprehensive PRD generation
-- Review and approve each task completion
-- Maintain clear file organization in `/tasks` directory
-- Always wait for approval before proceeding to next task
-
-## File Organization
-
-- PRDs: `/tasks/prd-[feature-name].md`
-- Task Lists: `/tasks/tasks-[prd-file-name].md`
-- Keep relevant files list updated as you work 
+## References
+- PRD: `PRDs/prd-equity-dashboard-v1.md`
+- Design: `PRDs/prd-equity-dashboard-design-v1.md`
+- Tasks: `PRD tasks/tasks-prd-equity-dashboard-v1.md`
+- Workflow: `WORKFLOW.md` 
