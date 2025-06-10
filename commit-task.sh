@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# Task Commit Helper Script
-# Usage: ./commit-task.sh "1.1" "Initialize Next.js 14 project with TypeScript"
+# Major Task Commit Helper Script
+# Usage: ./commit-task.sh "1.0" "Project Foundation & Design System"
 
 if [ $# -ne 2 ]; then
-    echo "Usage: ./commit-task.sh \"task_number\" \"task_description\""
-    echo "Example: ./commit-task.sh \"1.1\" \"Initialize Next.js 14 project with TypeScript\""
+    echo "Usage: ./commit-task.sh \"major_task_number\" \"major_task_description\""
+    echo "Example: ./commit-task.sh \"1.0\" \"Project Foundation & Design System\""
+    echo "Note: Only commit after completing ALL sub-tasks within a major task"
     exit 1
 fi
 
@@ -16,13 +17,13 @@ TASK_DESCRIPTION=$2
 git add .
 
 # Create commit message
-COMMIT_MSG="✅ Task $TASK_NUMBER: $TASK_DESCRIPTION
+COMMIT_MSG="✅ Major Task $TASK_NUMBER: $TASK_DESCRIPTION
 
-- Completed implementation following TDD approach
-- All tests passing
-- Ready for next task
+- Completed all sub-tasks following TDD approach
+- All tests passing and comprehensive coverage maintained
+- Ready for next major task
 
-Progress: Task $TASK_NUMBER completed"
+Progress: Major Task $TASK_NUMBER completed"
 
 # Commit changes
 git commit -m "$COMMIT_MSG"
@@ -35,4 +36,4 @@ else
     echo "⚠️  Remote origin not set up yet. Run 'git remote add origin <your-github-url>' first"
 fi
 
-echo "✅ Task $TASK_NUMBER committed successfully!" 
+echo "✅ Major Task $TASK_NUMBER committed successfully!" 

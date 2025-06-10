@@ -56,9 +56,10 @@ src/
 
 ### Task Management
 - Follow task list in `PRD tasks/tasks-prd-equity-dashboard-v1.md`
-- Commit after each completed task using `./commit-task.sh`
-- Update README progress tracking
-- Mark tasks as completed in task list
+- Work through sub-tasks systematically but only commit after completing entire major task
+- Use `./commit-task.sh` for major task commits (1.0, 2.0, 3.0, etc.)
+- Update README progress tracking after major task completion
+- Mark both major tasks and all sub-tasks as completed in task list
 
 ### Financial Calculations
 - 100% test coverage required
@@ -79,14 +80,14 @@ src/
 - React.memo for expensive components
 
 ## Commit Workflow
-1. Complete task following TDD
+1. Complete ALL sub-tasks within major task following TDD
 2. Run all tests: `npm test`
-3. Commit: `./commit-task.sh "X.Y" "Task description"`
-4. Update task list and README progress
+3. Commit: `./commit-task.sh "X.0" "Major Task description"`
+4. Update task list (mark major task and all sub-tasks complete) and README progress
 5. Push to GitHub
 
-## Next Task
-Current focus: Task 1.1 - Initialize Next.js 14 project with TypeScript and app router
+## Next Major Task
+Current focus: Major Task 1.0 - Project Foundation & Design System (complete all sub-tasks 1.1-1.8)
 
 ## References
 - PRD: `PRDs/prd-equity-dashboard-v1.md`
