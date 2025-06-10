@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+:root {
+  /* Base colors */
+  --background: #fefefe;
+  --foreground: #1a1a1a;
+  --muted: #f8f9fa;
+  --muted-foreground: #6b7280;
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --ring: #3b82f6;
+  
+  /* Pastel color palette */
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #475569;
+  --accent: #f0f9ff;
+  --accent-foreground: #0c4a6e;
+  
+  /* Phase colors for cycle identification */
+  --phase-expansion: #dcfce7;
+  --phase-expansion-foreground: #166534;
+  --phase-expansion-border: #bbf7d0;
+  
+  --phase-contraction: #fef2f2;
+  --phase-contraction-foreground: #991b1b;
+  --phase-contraction-border: #fecaca;
+  
+  --phase-transition: #fefce8;
+  --phase-transition-foreground: #a16207;
+  --phase-transition-border: #fde68a;
+  
+  --phase-stable: #f8fafc;
+  --phase-stable-foreground: #475569;
+  --phase-stable-border: #e2e8f0;
+  
+  /* Chart colors */
+  --chart-1: #8b5cf6;
+  --chart-2: #06b6d4;
+  --chart-3: #10b981;
+  --chart-4: #f59e0b;
+  --chart-5: #ef4444;
+  --chart-6: #ec4899;
+  
+  /* Status colors */
+  --success: #10b981;
+  --success-foreground: #ffffff;
+  --warning: #f59e0b;
+  --warning-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  
+  /* Card and surface colors */
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+    --muted: #1a1a1a;
+    --muted-foreground: #a1a1aa;
+    --border: #27272a;
+    --input: #1a1a1a;
+    --ring: #3b82f6;
+    
+    --primary: #6366f1;
+    --primary-foreground: #ffffff;
+    --secondary: #1e293b;
+    --secondary-foreground: #cbd5e1;
+    --accent: #0f172a;
+    --accent-foreground: #e2e8f0;
+    
+    /* Dark mode phase colors */
+    --phase-expansion: #052e16;
+    --phase-expansion-foreground: #bbf7d0;
+    --phase-expansion-border: #166534;
+    
+    --phase-contraction: #450a0a;
+    --phase-contraction-foreground: #fecaca;
+    --phase-contraction-border: #991b1b;
+    
+    --phase-transition: #451a03;
+    --phase-transition-foreground: #fde68a;
+    --phase-transition-border: #a16207;
+    
+    --phase-stable: #0f172a;
+    --phase-stable-foreground: #cbd5e1;
+    --phase-stable-border: #334155;
+    
+    --card: #1a1a1a;
+    --card-foreground: #fafafa;
+    --popover: #1a1a1a;
+    --popover-foreground: #fafafa;
+  }
+}
+
+@theme inline {
+  /* Base colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  /* Brand colors */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  /* Phase colors */
+  --color-phase-expansion: var(--phase-expansion);
+  --color-phase-expansion-foreground: var(--phase-expansion-foreground);
+  --color-phase-expansion-border: var(--phase-expansion-border);
+  
+  --color-phase-contraction: var(--phase-contraction);
+  --color-phase-contraction-foreground: var(--phase-contraction-foreground);
+  --color-phase-contraction-border: var(--phase-contraction-border);
+  
+  --color-phase-transition: var(--phase-transition);
+  --color-phase-transition-foreground: var(--phase-transition-foreground);
+  --color-phase-transition-border: var(--phase-transition-border);
+  
+  --color-phase-stable: var(--phase-stable);
+  --color-phase-stable-foreground: var(--phase-stable-foreground);
+  --color-phase-stable-border: var(--phase-stable-border);
+  
+  /* Chart colors */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  
+  /* Status colors */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  /* Surface colors */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  
+  /* Spacing scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility classes for phase identification */
+.phase-expansion {
+  background-color: var(--phase-expansion);
+  color: var(--phase-expansion-foreground);
+  border-color: var(--phase-expansion-border);
+}
+
+.phase-contraction {
+  background-color: var(--phase-contraction);
+  color: var(--phase-contraction-foreground);
+  border-color: var(--phase-contraction-border);
+}
+
+.phase-transition {
+  background-color: var(--phase-transition);
+  color: var(--phase-transition-foreground);
+  border-color: var(--phase-transition-border);
+}
+
+.phase-stable {
+  background-color: var(--phase-stable);
+  color: var(--phase-stable-foreground);
+  border-color: var(--phase-stable-border);
+}
