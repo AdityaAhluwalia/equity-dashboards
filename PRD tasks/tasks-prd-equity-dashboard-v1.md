@@ -184,7 +184,7 @@
 
 - [ ] 3.0 Financial Calculations Engine (30+ Ratios with Real Data Testing)
   - [x] 3.1 Universal Ratio Calculator (12 ratios - ROE, Growth, P/E, etc.) ✅ COMPLETED
-  - [ ] 3.2 Non-Finance Ratio Calculator (12 ratios - OPM, ROCE, Working Capital)
+  - [x] 3.2 Non-Finance Ratio Calculator (12 ratios - OPM, ROCE, Working Capital) ✅ COMPLETED
   - [x] 3.3 Finance-Specific Ratio Calculator (6 ratios - NIM, Cost-to-Income) ✅ COMPLETED
   - [ ] 3.4 Historical Trend Analysis Engine (CAGR, Growth patterns)
   - [ ] 3.5 Cycle Detection Algorithm (Expansion/Contraction phases)
