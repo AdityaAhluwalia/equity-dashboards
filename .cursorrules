@@ -1,0 +1,52 @@
+# 🚀 AI Dev Tasks for Cursor 🤖
+
+Welcome to **AI Dev Tasks**! This workspace uses a structured approach to feature development with built-in checkpoints for verification.
+
+## Workflow: From Idea to Implemented Feature 💡➡️💻
+
+### 1️⃣ Create a Product Requirement Document (PRD)
+Use `@create-prd.mdc` to generate a detailed PRD:
+```
+Use @create-prd.mdc
+Here's the feature I want to build: [Describe your feature in detail]
+Reference these files to help you: [Optional: @file1.py @file2.ts]
+```
+
+### 2️⃣ Generate Your Task List from the PRD
+Use `@generate-tasks.mdc` to create implementation tasks:
+```
+Now take @MyFeature-PRD.md and create tasks using @generate-tasks.mdc
+```
+
+### 3️⃣ Process Tasks Step-by-Step
+Use `@process-task-list.mdc` for methodical implementation:
+```
+Please start on task 1.1 and use @process-task-list.mdc
+```
+
+## ✨ Core Principles
+
+1. **Structured Development:** Clear process from idea to code
+2. **Step-by-Step Verification:** Review and approve each step
+3. **Manages Complexity:** Break down large features into digestible tasks
+4. **Clear Progress Tracking:** Visual representation of completed tasks
+
+## 🗂️ Workflow Files
+
+- **`create-prd.mdc`**: Guides AI in generating Product Requirement Documents
+- **`generate-tasks.mdc`**: Breaks down PRDs into detailed task lists
+- **`process-task-list.mdc`**: Manages task implementation one step at a time
+
+## 💡 Best Practices
+
+- Be specific in feature descriptions
+- Use MAX mode for comprehensive PRD generation
+- Review and approve each task completion
+- Maintain clear file organization in `/tasks` directory
+- Always wait for approval before proceeding to next task
+
+## File Organization
+
+- PRDs: `/tasks/prd-[feature-name].md`
+- Task Lists: `/tasks/tasks-[prd-file-name].md`
+- Keep relevant files list updated as you work 
