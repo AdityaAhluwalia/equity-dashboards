@@ -105,7 +105,7 @@ export default function MetricCards({
           {/* Metric Label */}
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">
-              {metric.label}
+              {metric.label.toUpperCase()}
             </span>
             <span className="text-xs" role="img" aria-label={`${metric.trend} trend`}>
               {getTrendIcon(metric.trend)}
