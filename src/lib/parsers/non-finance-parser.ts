@@ -44,6 +44,7 @@ export interface NonFinanceBalanceSheetData {
   cwip: number;
   investments: number;
   other_assets: number;
+  inventory?: number; // Optional inventory field for validation tests
 }
 
 export interface NonFinanceCashFlowData {
@@ -181,7 +182,8 @@ export function parseNonFinanceData(rawData: any): NonFinanceDataResult {
         fixed_assets: bs.fixed_assets,
         cwip: bs.cwip,
         investments: bs.investments,
-        other_assets: bs.other_assets || 0
+        other_assets: bs.other_assets || 0,
+        inventory: bs.inventory // Include inventory if present in source data
       };
     });
 
