@@ -648,4 +648,29 @@ After each major UI task completion (Tasks 5.0, 6.0, 7.0, etc.), we will:
 
 ---
 
+## 🎯 Development Guidelines for UI/UX Tasks
+
+### Core Development Principles
+1. **Follow UI/UX Guidelines**: Always reference and implement the design patterns, colors, spacing, and interaction patterns defined in this document
+2. **Avoid Over-Engineering**: Keep components simple and focused - don't overcomplicate the frontend code or create unnecessary abstractions
+3. **Show Progress Incrementally**: Demonstrate each component after completing its individual task for review and feedback
+4. **Test-Driven Development**: Write failing tests first, then implement minimal code to pass tests, following the TDD cycle
+5. **Real Data Integration**: Test all components with actual company data (Emami, Axis Bank) to ensure layouts work with real-world data volumes and variations
+
+### Component Design Standards
+- **Single Responsibility**: Each component should have one clear purpose
+- **Reusable Patterns**: Use established design tokens and component patterns
+- **Performance First**: Optimize for smooth interactions and fast rendering
+- **Mobile Responsive**: Design for mobile-first, then enhance for desktop
+- **Accessible**: Include keyboard navigation, ARIA labels, and screen reader support
+
+### Code Quality Expectations
+- Clean, readable TypeScript with proper typing
+- Consistent naming conventions
+- Comprehensive test coverage (especially for financial calculations)
+- Performance optimization for large datasets
+- Error boundary implementation for robust user experience
+
+---
+
 Remember: **Elegance is the elimination of excess.** Every pixel should earn its place on the screen. 
