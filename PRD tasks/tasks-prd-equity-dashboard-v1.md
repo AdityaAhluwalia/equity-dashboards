@@ -236,13 +236,13 @@
   - [x] 8.7 Add trend direction arrows and annotations ✅ COMPLETED
 
 - [ ] 9.0 Cash Flow Patterns Section
-  - [ ] 9.1 Build CashFlowChart with stacked bars
-  - [ ] 9.2 Implement OCF, ICF, FCF breakdown display
-  - [ ] 9.3 Create net cash flow line overlay
-  - [ ] 9.4 Build QuarterlyCashFlow with positive/negative bars
-  - [ ] 9.5 Add cumulative cash generation tracking
-  - [ ] 9.6 Implement FCF yield calculations and display
-  - [ ] 9.7 Create cash burn rate indicators
+  - [x] 9.1 Build CashFlowChart with stacked bars ✅ COMPLETED
+  - [x] 9.2 Implement OCF, ICF, FCF breakdown display ✅ COMPLETED
+  - [x] 9.3 Create net cash flow line overlay ✅ COMPLETED
+  - [x] 9.4 Build QuarterlyCashFlow with positive/negative bars ✅ COMPLETED
+  - [x] 9.5 Add cumulative cash generation tracking ✅ COMPLETED
+  - [x] 9.6 Implement FCF yield calculations and display ✅ COMPLETED
+  - [x] 9.7 Create cash burn rate indicators ✅ COMPLETED
 
 - [ ] 10.0 Key Ratios Dashboard Section
   - [ ] 10.1 Build ProfitabilityRatios component (ROE, ROCE, ROA)
